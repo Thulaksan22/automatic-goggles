@@ -1,6 +1,6 @@
 import { instance } from './instance';
 
-const Service = {
+export const Service = {
     online:()=>instance.get('online'),
     featured:()=>instance.get('featured'),
 }
