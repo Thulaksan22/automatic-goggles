@@ -10,6 +10,16 @@ class Profile {
         makeAutoObservable(this);
         this.fetchData();
     }
+
+//stores/Profile.js
+drop = profile => {
+    const onlined = this.online.filter(item => item.id !== profile.id);
+    const featured = this.featured.filter(item => item.id !== profile.id);
+    runInAction(() => {
+        this.online = onlined;
+        this.featured = featured;
+    });
+}
     
     fetchData = async () => {
         const featured = await Service.featured();

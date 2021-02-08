@@ -9,11 +9,11 @@ export default function Home() {
         <title>Meetic test-entretien</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+
+      <div className='container d-grid gap-4'>
         <ProfileList data='online' />
-        <i className="bi-alarm"></i><i className="bi-alarm"></i>
         <ProfileList data='featured' />
-      </main>
+      </div>
     </div>
   )
 }
